@@ -1,0 +1,17 @@
+
+/node_modules
+/logs
+*.log
+npm-debug.log*
+
+# vim
+/sessions
+*.vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+*~
+tags
+[._]*.un~

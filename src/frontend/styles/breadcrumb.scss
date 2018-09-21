@@ -1,0 +1,22 @@
+
+.breadcrumb {
+   border:none;
+   background:transparent; 
+   margin:0; 
+   padding:0; 
+   text-align:left;
+   width:250px;
+
+   .breadcrumb-item {
+      color:$white;
+
+      a {
+         color:rgba($white, 0.5);
+      }
+
+      a:hover {
+         text-decoration:none;
+         color:$white;
+      }
+   }
+}

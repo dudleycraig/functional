@@ -1,0 +1,45 @@
+{
+  "extends": ["eslint:recommended"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "arrowFunctions": true,
+      "classes": true,
+      "spread": true,
+      "experimentalObjectRestSpread": true
+    },
+    "experimentalDecorators": true
+  },
+  "rules": {
+    "indent": 0,
+    "quotes": 0,
+    "linebreak-style": 0,
+    "semi": 0,
+    "object-curly-spacing": 0,
+    "no-trailing-spaces": 0,
+    "keyword-spacing": 0,
+    "no-extra-semi": 0,
+    "no-unused-vars": 0,
+    "no-console": 0,
+    "semi": 0
+  },
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "__DEV__": true
+  },
+  "plugins": [
+    "mocha",
+    "react"
+  ]
+}
