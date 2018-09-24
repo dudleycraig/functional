@@ -5,10 +5,10 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 /** 
 $fa-font-path: "~font-awesome/fonts"; 
 @import '~font-awesome/scss/font-awesome.scss';
@@ -19,7 +19,20 @@ $fa-font-path: "~font-awesome/fonts";
 
 $spinner: '../../public/images/spinner.gif';
 
-@import 'breadcrumb.scss';
-@import 'main-navigation.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'home.scss';
 
+div#app {
 
+   header {
+   }
+
+   main {
+      margin-top:10px;
+      z-index: 1;
+   }
+
+   footer {
+   }
+}

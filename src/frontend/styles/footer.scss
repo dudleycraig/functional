@@ -1,17 +1,16 @@
+/** styles/footer **/
 
-.breadcrumb {
-   border:none;
-   background:transparent; 
-   margin:0; 
-   padding:0; 
-   text-align:left;
-   width:250px;
+#footer {
+   width:100%;
+   position:absolute;
+   bottom:0;
 
-   .breadcrumb-item {
+   div {
       color:$white;
 
       a {
          color:rgba($white, 0.5);
+         margin:0 5px;
       }
 
       a:hover {
