@@ -25,7 +25,11 @@ module.exports = {
   target: 'web',
   watch: true,
   resolve: {
-    modules: [ 'node_modules', path.resolve(__dirname, 'src/frontend'), path.resolve(__dirname, 'vendor/frontend') ],
+    modules: [ 
+      'node_modules', 
+      path.resolve(__dirname, 'src/frontend'), 
+      path.resolve(__dirname, 'vendor/frontend') 
+    ],
     extensions: [ '*', '.js', '.jsx', '.json', '.css', '.scss' ]
   },
   devtool: 'source-map', 
@@ -74,7 +78,7 @@ module.exports = {
           { loader: 'style-loader' }, 
           { loader: 'css-loader', options: { module: true } }, // translate css into js 
           { loader: 'postcss-loader', options: { plugins: () => [ require('autoprefixer')({ 'browsers': ['> 1%', 'last 2 versions']}) ]} },
-          { loader: 'sass-loader' } // compiles sass/scss to css 
+          { loader: 'sass-loader', options: { outputStyle: 'expanded' } } // compiles sass/scss to css 
         ]
       },
       {
@@ -87,15 +91,15 @@ module.exports = {
       },
       {
         test: /.(woff(2)?)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: '../fonts' } } ] 
+        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: 'fonts/' } } ] 
       },
       {
         test: /.(ttf)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: '../fonts' } } ] 
+        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: 'fonts/' } } ] 
       },
       {
         test: /.(eot)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: '../fonts' } } ] 
+        use: [ { loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/', publicPath: 'fonts/' } } ] 
       }
     ]
   },

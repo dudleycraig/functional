@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Portfolio = props => {
-  return (<div id="portfolio"></div>);
+  return (<main role="main" id="portfolio"></main>);
 };
 
 const PortfolioContainer = connect(state => state)(Portfolio);

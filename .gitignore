@@ -4,6 +4,10 @@
 *.log
 npm-debug.log*
 
+/public/fonts
+/public/index.js
+/public/css
+
 # vim
 /sessions
 *.vim

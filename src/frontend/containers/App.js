@@ -9,16 +9,14 @@ import {About} from 'containers/About';
 import {Portfolio} from 'containers/Portfolio';
 import {Contact} from 'containers/Contact';
 
-import MainNavigation from 'components/MainNavigation';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 const App = props => {
   return (
     <Router>
-      <div>
-        
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <MainNavigation />
-        </nav>
+      <div id="app">
+        <Header />
         {
         <Switch>
           <Route exact path="/" component={Home}></Route>
@@ -27,6 +25,7 @@ const App = props => {
           <Route path="/contact" component={Contact}></Route>
         </Switch>
         }
+        <Footer />
       </div>
     </Router>
   );
