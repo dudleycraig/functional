@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const About = props => {
-  return (<main role="main" id="about"></main>);
+  return (<section role="main" id="about"></section>);
 };
 
 const AboutContainer = connect(state => state)(About);

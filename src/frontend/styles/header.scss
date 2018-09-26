@@ -1,57 +1,47 @@
 /** styles/header **/
 
 header#main-header {
-   width:100%;
-   position:relative;
-   top:0;
-   height:40px;
+   nav#main-navigation {
+      position:relative;
+      padding:0;
 
-   div.main-navigation {
-      > div {
-         position:relative;
-         z-index:90;
-         width:100%;
+      a.navbar-brand {
+         margin-left:10px;
+      }
 
-         div.desktop {
+      button.navbar-toggler {
+         svg.fa-bars {
+            path {
+               color:#fff;
+               opacity:0.5;
+            }
          }
-         
-         div.mobile {
+      }
+
+      button.navbar-toggler.active, button.navbar-toggler:hover {
+         svg.fa-bars {
+            path {
+               opacity:1;
+            }
+         }
+      }
+
+      div#main-navigation-toggle {
+         top:40px;
+         width:100%;
+         height:100%;
+         z-index:90;
+
+         ul.navbar-nav {
             text-align:center;
-            width:100%;
 
-            div[role="button"] {
-               float:left; 
-               clear:both;
-               cursor:pointer;
+            li.nav-item {
+               border-width:1px 0 0 0;
+               border-style:solid;
+               border-color:#7b7971;
+               background:#343A40;
 
-               svg path {
-                  fill:$white;
-                  opacity:0.5;
-               }
-
-               svg.active path {
-                  opacity:1;
-               }
-            }
-
-            div[role="button"]:hover {
-               svg path {
-                  opacity:1;
-               }
-            }
-
-            div:nth-child(2) {
-               display:inline-block;
-               clear:both;
-
-               ul.navbar-nav {
-                  li.nav-item {
-                     a.nav-link {
-                     }
-
-                     a.nav-link.active {
-                     }
-                  }
+               a.nav-link {
                }
             }
          }

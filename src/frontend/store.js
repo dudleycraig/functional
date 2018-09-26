@@ -7,6 +7,7 @@ import app from 'reducers/app';
 export const store = createStore(
   combineReducers({ 
       app
-  }), applyMiddleware(thunkMiddleware));
+  }), applyMiddleware(thunkMiddleware)
+);
 
 export default store;
