@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Contact = props => {
-  return (<main role="main" id="contact"></main>);
+  return (<section role="main" id="contact"></section>);
 };
 
 const ContactContainer = connect(state => state)(Contact);

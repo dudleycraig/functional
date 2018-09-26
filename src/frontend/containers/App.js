@@ -12,11 +12,37 @@ import {Contact} from 'containers/Contact';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
-const App = props => {
+import {updateNavStatus, updateAppMode} from 'actions/app';
+
+const App = ({navigation, updateNavStatus, updateAppMode}) => {
+
+  const updateAppModeHandler = event => {
+    const modes = ['xs', 'sm', 'md', 'lg', 'xl'];
+    const active = modes.filter((modes, mode) => { 
+      console.log('breakpoints', $('#breakpoints'));
+      return $('#breakpoints').css('display') === 'inline';
+    }, []);
+    console.log('modes', active);
+    updateAppMode('xs');
+  }
+
+  window.addEventListener('resize', updateAppModeHandler);
+
   return (
     <Router>
       <div id="app">
-        <Header />
+        <div id="breakpoints">
+          <span className="d-sm-none">xs</span>
+          <span className="d-none d-sm-inline d-md-none d-lg-none d-xl-none">sm</span>
+          <span className="d-none d-md-inline d-lg-none d-xl-none">md</span>
+          <span className="d-none d-lg-inline d-xl-none">lg</span>
+          <span className="d-none d-xl-inline">xl</span>
+        </div>
+        <Header 
+          navigation={navigation} 
+          updateNavStatus={updateNavStatus} 
+          updateAppMode={updateAppMode}
+        />
         {
         <Switch>
           <Route exact path="/" component={Home}></Route>
@@ -32,7 +58,12 @@ const App = props => {
 };
 
 const AppContainer = connect(
-  state => state,
+  (state) => ({
+    navigation:state.app.navigation
+  }),
+  {
+    updateNavStatus:updateNavStatus
+  }
 )(App);
 
 export {AppContainer as App};
