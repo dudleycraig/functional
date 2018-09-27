@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
+import {store} from 'store';
+
 import {Home} from 'containers/Home';
 import {About} from 'containers/About';
 import {Portfolio} from 'containers/Portfolio';
@@ -12,36 +14,22 @@ import {Contact} from 'containers/Contact';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
-import {updateNavStatus, updateAppMode} from 'actions/app';
+import {updateNavStatus} from 'actions/app';
 
-const App = ({navigation, updateNavStatus, updateAppMode}) => {
-
-  const updateAppModeHandler = event => {
-    const modes = ['xs', 'sm', 'md', 'lg', 'xl'];
-    const active = modes.filter((modes, mode) => { 
-      console.log('breakpoints', $('#breakpoints'));
-      return $('#breakpoints').css('display') === 'inline';
-    }, []);
-    console.log('modes', active);
-    updateAppMode('xs');
-  }
-
-  window.addEventListener('resize', updateAppModeHandler);
-
+const App = ({app, updateNavStatus}) => {
   return (
     <Router>
       <div id="app">
         <div id="breakpoints">
-          <span className="d-sm-none">xs</span>
-          <span className="d-none d-sm-inline d-md-none d-lg-none d-xl-none">sm</span>
-          <span className="d-none d-md-inline d-lg-none d-xl-none">md</span>
-          <span className="d-none d-lg-inline d-xl-none">lg</span>
-          <span className="d-none d-xl-inline">xl</span>
+          <span id="xs" className="d-sm-none" />
+          <span id="sm" className="d-none d-sm-inline d-md-none d-lg-none d-xl-none" />
+          <span id="md" className="d-none d-md-inline d-lg-none d-xl-none" />
+          <span id="lg" className="d-none d-lg-inline d-xl-none" />
+          <span id="xl" className="d-none d-xl-inline" />
         </div>
         <Header 
-          navigation={navigation} 
+          app={app} 
           updateNavStatus={updateNavStatus} 
-          updateAppMode={updateAppMode}
         />
         {
         <Switch>
@@ -59,7 +47,7 @@ const App = ({navigation, updateNavStatus, updateAppMode}) => {
 
 const AppContainer = connect(
   (state) => ({
-    navigation:state.app.navigation
+    app:state.app
   }),
   {
     updateNavStatus:updateNavStatus
