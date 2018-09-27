@@ -12,7 +12,7 @@ library.add(faBars);
 
 const Header = props => {
   const toggleNavStatusHandler = status => {
-    props.updateNavStatus(props.navigation.status === 'hidden' ? 'visible' : 'hidden');
+    props.updateNavStatus(props.app.navigation.status === 'hidden' ? 'visible' : 'hidden');
   }
 
   const closeNavStatusHandler = status => {
@@ -23,10 +23,10 @@ const Header = props => {
     <header id="main-header" className="bs-component">
       <nav id="main-navigation" className="navbar navbar-expand-lg navbar-dark bg-primary">
         <a className="navbar-brand" href="#">functional.org.za</a>
-        <button className={(props.navigation.status === 'visible' ? 'active ' : '') + 'navbar-toggler'} type="button" onClick={toggleNavStatusHandler} >
+        <button className={(props.app.navigation.status === 'visible' ? 'active ' : '') + 'navbar-toggler'} type="button" onClick={toggleNavStatusHandler} >
           <FontAwesomeIcon icon={faBars} size="1x" className="active" />
         </button>
-        <div id="main-navigation-toggle" className={(props.navigation.status === 'hidden' ? 'collapse ' : '') + 'navbar-collapse'}>
+        <div id="main-navigation-toggle" className={(props.app.navigation.status === 'hidden' ? 'collapse ' : '') + (props.app.mode) + ' navbar-collapse'}>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink className="nav-link" exact activeClassName="active" to="/" onClick={closeNavStatusHandler} >Home</NavLink>

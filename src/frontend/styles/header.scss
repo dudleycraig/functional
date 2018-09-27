@@ -10,6 +10,8 @@ header#main-header {
       }
 
       button.navbar-toggler {
+         margin-right:5px;
+
          svg.fa-bars {
             path {
                color:#fff;
@@ -38,8 +40,24 @@ header#main-header {
             li.nav-item {
                border-width:1px 0 0 0;
                border-style:solid;
-               border-color:#7b7971;
+               border-color:transparent;
                background:#343A40;
+
+               a.nav-link {
+               }
+            }
+         }
+      }
+
+      div#main-navigation-toggle.xl, div#main-navigation-toggle.lg {
+      }
+
+      div#main-navigation-toggle.md, div#main-navigation-toggle.sm, div#main-navigation-toggle.xs {
+         position:absolute;
+
+         ul.navbar-nav {
+            li.nav-item { 
+               border-color:#7b7971;
 
                a.nav-link {
                }
