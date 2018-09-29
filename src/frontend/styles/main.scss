@@ -24,15 +24,19 @@ $spinner: '../../public/images/spinner.gif';
 @import 'home.scss';
 
 div#app {
+   height:100vh;
+   padding:0; 
+   margin:0;
 
    header {
+      z-index:90;
    }
 
-   section {
-      margin-top:10px;
-      z-index: 1;
+   main {
+      z-index:1;
    }
 
    footer {
+      z-index:90;
    }
 }

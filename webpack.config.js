@@ -28,7 +28,8 @@ module.exports = {
     modules: [ 
       'node_modules', 
       path.resolve(__dirname, 'src/frontend'), 
-      path.resolve(__dirname, 'vendor/frontend') 
+      path.resolve(__dirname, 'vendor/frontend'),
+      path.resolve(__dirname, 'public/images')
     ],
     extensions: [ '*', '.js', '.jsx', '.json', '.css', '.scss' ]
   },
