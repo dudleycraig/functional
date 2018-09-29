@@ -3,7 +3,7 @@
 import {types as typesApp} from 'types/app';
 
 const initialState = { 
-  mode:'xs',
+  mode:'',
   messages:{
     max:1,
     counter:0,

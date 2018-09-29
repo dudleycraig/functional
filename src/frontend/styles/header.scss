@@ -1,9 +1,14 @@
 /** styles/header **/
 
 header#main-header {
+   position:fixed;
+   width:100%;
+   top:0;
+
    nav#main-navigation {
-      position:relative;
       padding:0;
+      position:relative;
+      border-bottom:1px solid #666;
 
       a.navbar-brand {
          margin-left:10px;
@@ -50,6 +55,16 @@ header#main-header {
       }
 
       div#main-navigation-toggle.xl, div#main-navigation-toggle.lg {
+         position:static;
+
+         ul.navbar-nav {
+            li.nav-item { 
+               border-color:transparent;
+
+               a.nav-link {
+               }
+            }
+         }
       }
 
       div#main-navigation-toggle.md, div#main-navigation-toggle.sm, div#main-navigation-toggle.xs {
