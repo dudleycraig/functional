@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {NavLink, Route} from 'react-router-dom';
-import ResponsiveMenu from 'react-responsive-navbar';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

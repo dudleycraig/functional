@@ -27,11 +27,7 @@ const App = ({app, updateNavStatus}) => {
           <span id="lg" className="d-none d-lg-inline d-xl-none" />
           <span id="xl" className="d-none d-xl-inline" />
         </div>
-        {console.log('mode:', app.mode)}
-        <Header 
-          app={app} 
-          updateNavStatus={updateNavStatus} 
-        />
+        <Header app={app} updateNavStatus={updateNavStatus} />
         {
         <Switch>
           <Route exact path="/" component={Home}></Route>
