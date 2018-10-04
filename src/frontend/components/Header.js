@@ -33,9 +33,6 @@ const Header = props => {
             <li className="nav-item">
               <NavLink className="nav-link" exact activeClassName="active" to="/portfolio" onClick={closeNavStatusHandler} >Portfolio</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" exact activeClassName="active" to="/contact" onClick={closeNavStatusHandler} >Contact</NavLink>
-            </li>
           </ul>
         </div>
       </nav>

@@ -19,13 +19,12 @@ export const store = createStore(
 window.addEventListener('load', event => {
   store.dispatch(updateAppMode(event));
 
-  /**
-  const state = store.getState();
-  const item = state.carousel.items[state.carousel.items.findIndex(item => item.index === state.carousel.index)];
-  const target = document.getElementById('item-' + item.index).getElementsByClassName('item-image')[0];
-  const source = item.images['lg'];
-  store.dispatch(fetchCarouselImage(source, target));
-   **/
+  const item = store.getState().carousel.items[store.getState().carousel.index];
+  const source = item.images['xs'];
+  if (document.getElementById('item-' + item.index)) {
+    const target = document.getElementById('item-' + item.index).getElementsByClassName('item-image')[0];
+    store.dispatch(fetchCarouselImage(source, target, item));
+  }
 });
 
 window.addEventListener('resize', event => {
