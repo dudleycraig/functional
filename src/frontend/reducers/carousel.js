@@ -14,14 +14,11 @@ const initialState = {
       reference:'glanbia',
       images: { 
         xs:'images/portfolio/glanbia/xs.glanbia.png',
-        sm:'images/portfolio/indaba/remote-bravia.png',
-        md:'images/portfolio/indaba/remote-bravia.png',
-        lg:'images/portfolio/indaba/remote-bravia.png',
-        xl:'images/portfolio/indaba/remote-bravia.png'
+        lg:'images/portfolio/glanbia/lg.glanbia.png'
       },
       header:'Glanbia',
       brief:'B2B eCommerce for Nutritional Supplements based off of Hybris api. Work encompassed updating ux/ui for updating address and payment details.',
-      technologies:[]
+      technologies:['react', 'redux', 'bootstrap', 'sass', 'spring', 'hybris', 'jquery']
     },
     {
       status:'no-image',
@@ -29,14 +26,11 @@ const initialState = {
       reference:'cognician',
       images: { 
         xs:'images/portfolio/cognician/xs.cognician.png',
-        sm:'images/portfolio/indaba/remote-bravia.png',
-        md:'images/portfolio/indaba/remote-bravia.png',
-        lg:'images/portfolio/indaba/remote-bravia.png',
-        xl:'images/portfolio/indaba/remote-bravia.png'
+        lg:'images/portfolio/cognician/lg.cognician.png',
       },
       header:'Cognician',
       brief:'White labelled, business oriented coaching. Mine was the development of client bespoke features and changes.',
-      technologies:[]
+      technologies:['cljs', 'reagent', 'bootstrap', 'sass']
     },
     {
       status:'no-image',
@@ -44,14 +38,11 @@ const initialState = {
       reference:'invent',
       images: { 
         xs:'images/portfolio/invent/xs.clicks.repeat-prescription.png',
-        sm:'images/portfolio/indaba/remote-bravia.png',
-        md:'images/portfolio/indaba/remote-bravia.png',
-        lg:'images/portfolio/indaba/remote-bravia.png',
-        xl:'images/portfolio/indaba/remote-bravia.png'
+        lg:'images/portfolio/invent/lg.clicks.repeat-prescription.png',
       },
       header:'Invent Commerce',
       brief:'Specialized eCommerce workshop specific to Hybris and Magento. The primary projects being Click\'s pharmacy features.',
-      technologies:[]
+      technologies:['jquery', 'react', 'redux', 'hybris', 'magento', 'spring', 'mysql']
     },
     {
       status:'no-image',
@@ -59,14 +50,11 @@ const initialState = {
       reference:'indaba',
       images: { 
         xs:'images/portfolio/indaba/xs.mts-cic-mobile-screens.png',
-        sm:'images/portfolio/indaba/remote-bravia.png',
-        md:'images/portfolio/indaba/remote-bravia.png',
-        lg:'images/portfolio/indaba/remote-bravia.png',
-        xl:'images/portfolio/indaba/remote-bravia.png'
+        lg:'images/portfolio/indaba/lg.mts-cic-mobile-screens.png',
       },
       header:'Indaba Mobile',
       brief:'White labelled, native mobile, multi tenancy chat application with custom survey content and reporting.',
-      technologies:[]
+      technologies:['jquery-ui', 'jquery', 'backbone', 'bootstrap', 'zend2', 'spring', 'mysql', 'cassandra']
     },
     {
       status:'no-image',
@@ -74,14 +62,11 @@ const initialState = {
       reference:'personal',
       images: { 
         xs:'images/portfolio/personal/xs.bravia-remote.png',
-        sm:'images/portfolio/indaba/remote-bravia.png',
-        md:'images/portfolio/indaba/remote-bravia.png',
-        lg:'images/portfolio/indaba/remote-bravia.png',
-        xl:'images/portfolio/indaba/remote-bravia.png'
+        lg:'images/portfolio/personal/lg.bravia-remote.png',
       },
       header:'Personal',
       brief:'Some personal projects I\'ve maintained.',
-      technologies:[]
+      technologies:['react', 'redux', 'jquery-ui', 'jquery', 'bootstrap', 'sass', 'bash', 'zend2', 'node', 'postgres']
     }
   ] 
 };

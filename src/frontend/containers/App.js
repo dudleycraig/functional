@@ -33,7 +33,6 @@ const App = ({app, updateNavStatus}) => {
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" component={About}></Route>
           <Route path="/portfolio" component={Portfolio}></Route>
-          <Route path="/contact" component={Contact}></Route>
         </Switch>
         }
         <Footer />
