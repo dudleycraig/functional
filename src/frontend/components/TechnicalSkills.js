@@ -31,9 +31,7 @@ const TechnicalSkills = props => {
         <div className="row">
 
           <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <h4>
-              <FontAwesomeIcon icon={faJs} size="3x" />
-            </h4>
+            <h4><FontAwesomeIcon icon={faJs} size="3x" /></h4>
             <p>Stateless, functional, front-end application development utilizing current ES6 strategies.</p>
             <span className="mx-auto mb-3">
               <span className="svg-wrapper"><FontAwesomeIcon icon={faReact} size="2x" /></span>
@@ -51,7 +49,7 @@ const TechnicalSkills = props => {
               <span className="svg-wrapper"><span className="text">CSS</span><FontAwesomeIcon icon={faCss3Alt} size="2x" /></span>
               <span className="svg-wrapper"><FontAwesomeIcon icon={faSass} size="2x" /></span>
               <span className="svg-wrapper"><Bootstrap /></span>
-            </span>  
+            </span>
           </div>
 
           <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
