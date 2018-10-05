@@ -34,88 +34,43 @@ const TechnicalSkills = props => {
             <h4>
               <FontAwesomeIcon icon={faJs} size="3x" />
             </h4>
-            <p>
-              Stateless, functional, front-end application development utilizing current ES6 strategies.
-            </p>
+            <p>Stateless, functional, front-end application development utilizing current ES6 strategies.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper">
-                <FontAwesomeIcon icon={faReact} size="2x" />
-              </span>
-              <span className="svg-wrapper">
-                <Redux />
-              </span>
-              <span className="svg-wrapper">
-                <JQuery />
-              </span>
-              <span className="svg-wrapper">
-                <CLJS />
-              </span>
+              <span className="svg-wrapper"><FontAwesomeIcon icon={faReact} size="2x" /></span>
+              <span className="svg-wrapper"><Redux /></span>
+              <span className="svg-wrapper"><JQuery /></span>
+              <span className="svg-wrapper"><CLJS /></span>
             </span>  
           </div>
 
           <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <h4>
-              <FontAwesomeIcon icon={faCode} size="3x" />
-            </h4>
-            <p>
-              Responsive, "mobile fist" approach to ui/ux design.
-            </p>
+            <h4><FontAwesomeIcon icon={faCode} size="3x" /></h4>
+            <p>Responsive, "mobile fist" approach to ui/ux design.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper">
-                <span className="text">HTML</span>
-                <FontAwesomeIcon icon={faHtml5} size="2x" />
-              </span>
-              <span className="svg-wrapper">
-                <span className="text">CSS</span>
-                <FontAwesomeIcon icon={faCss3Alt} size="2x" />
-              </span>
-              <span className="svg-wrapper">
-                <FontAwesomeIcon icon={faSass} size="2x" />
-              </span>
-              <span className="svg-wrapper">
-                <Bootstrap />
-              </span>
+              <span className="svg-wrapper"><span className="text">HTML</span><FontAwesomeIcon icon={faHtml5} size="2x" /></span>
+              <span className="svg-wrapper"><span className="text">CSS</span><FontAwesomeIcon icon={faCss3Alt} size="2x" /></span>
+              <span className="svg-wrapper"><FontAwesomeIcon icon={faSass} size="2x" /></span>
+              <span className="svg-wrapper"><Bootstrap /></span>
             </span>  
           </div>
 
           <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <h4>
-              <FontAwesomeIcon icon={faCogs} size="3x" />
-            </h4>
-            <p>
-              Back-end architecture and development of secure, restful APIs on a multitude of platforms.
-            </p>
+            <h4><FontAwesomeIcon icon={faCogs} size="3x" /></h4>
+            <p>Back-end architecture and development of secure, restful APIs on a multitude of platforms.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper">
-                <FontAwesomeIcon icon={faPhp} size="3x" />
-              </span>
-              <span className="svg-wrapper">
-                <FontAwesomeIcon icon={faJava} size="3x" />
-              </span>
-              <span className="svg-wrapper">
-                <Clojure />
-              </span>
+              <span className="svg-wrapper"><FontAwesomeIcon icon={faPhp} size="3x" /></span>
+              <span className="svg-wrapper"><FontAwesomeIcon icon={faJava} size="3x" /></span>
+              <span className="svg-wrapper"><Clojure /></span>
             </span>
           </div>
 
           <div className="col-lg-3 col-md-6 mb-6">
-            <h4>
-              <FontAwesomeIcon icon={faDatabase} size="3x" />
-            </h4>
-            <p>
-              Design of complex, relational structures, such as rbac authorization.<br />
-              High volume, concurrent and dynamic mechanisms.<br />
-            </p>
+            <h4><FontAwesomeIcon icon={faDatabase} size="3x" /></h4>
+            <p>Design of complex, relational structures, such as rbac authorization.<br />High volume, concurrent and dynamic mechanisms.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper">
-                <MySQL />
-              </span>
-              <span className="svg-wrapper">
-                <Cassandra />
-              </span>
-              <span className="svg-wrapper">
-                <Datomic />
-              </span>
+              <span className="svg-wrapper"><MySQL /></span>
+              <span className="svg-wrapper"><Cassandra /></span>
+              <span className="svg-wrapper"><Datomic /></span>
             </span>
           </div>
 

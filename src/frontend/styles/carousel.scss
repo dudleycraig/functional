@@ -61,6 +61,7 @@ section#carousel {
             div.caption {
                display:block;
                overflow:hidden;
+               position:relative;
 
                h5 {
                   color:rgba(255, 255, 255, 1);
@@ -72,6 +73,48 @@ section#carousel {
                   padding:0 5px;
                   font-size:0.8em;
                   color:rgba(255, 255, 255, 0.5);
+               }
+
+               span.technologies {
+                  display:inline-block;
+                  width:100%;
+                  position:absolute;
+                  bottom:0;
+                  left:0;
+                  z-index:8;
+                  text-align:center;
+
+                  span.svg-wrapper {
+                     position:relative;
+                     display:inline-block;
+                     width:25px;
+                     height:30px;
+                     margin:0 2px;
+                     padding:0; 
+                     text-align:center;
+
+                     span.text, svg {
+                        position:absolute;
+                        display:inline-block;
+                        width:100%;
+                        z-index:2;
+                     }
+
+                     span.text {
+                        top:0;
+                        left:0;
+                        font-size:0.6em;
+                        font-weight:600;
+                     }
+                     
+                     svg {
+                        bottom:0;
+                        left:0;
+
+                        path {
+                        }
+                     }
+                  }
                }
             }
 

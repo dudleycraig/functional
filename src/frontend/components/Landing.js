@@ -12,7 +12,7 @@ const Landing = props => {
         <img width="100px" height="100px" src="images/profile.jpg" />
       </div>
       <h1>Dudley Craig</h1>
-      <p>Frontend software engineer who loves simple, functional interfaces.</p>
+      <p>Frontend software developer who loves simple, functional interfaces.</p>
     </section>
   );
 }

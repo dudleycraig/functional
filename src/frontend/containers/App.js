@@ -31,7 +31,6 @@ const App = ({app, updateNavStatus}) => {
         {
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route path="/about" component={About}></Route>
           <Route path="/portfolio" component={Portfolio}></Route>
         </Switch>
         }
