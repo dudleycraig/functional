@@ -3,10 +3,10 @@
 import {types as typesCarousel} from 'types/carousel';
 
 const initialState = { 
-  status:'',
-  index:2,
-  active:2,
-  direction:'',
+  status:'', // whether the carousel is in transition or still
+  index:2, // index of center image, if there were 7 images, the center one would be of index 3
+  active:2, // currently displayed item
+  direction:'', // left (previous), or right (next)
   items:[
     {
       status:'no-image',
@@ -73,13 +73,11 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
   switch(action.type) {
-    case typesCarousel.MOVE_CAROUSEL: 
+    case typesCarousel.SORT_CAROUSEL: 
       return {
         ...state,
-        index:action.index,
-        direction:action.direction,
         items: (() => {
-          switch(action.direction) {
+          switch(state.direction) {
 
             case('next'): // first item to last
               return [...state.items.slice(1, state.items.length), state.items[0]]
@@ -89,10 +87,10 @@ export default (state = initialState, action = {}) => {
 
             default: 
               return (() => {
-                  const index = state.items.findIndex(item => item.index === action.index);
+                  const index = state.items.findIndex(item => item.index === state.index);
                   const offset = (state.items.length - 1) / 2 - index;
 
-                  if(offset > 0) { // forwards 
+                  if(offset > 0) { // forwards, TODO: amend with ...rest
                     const fwd = [...Array(offset).keys()].reduce(
                       (items, key) => { 
                         return [items[items.length -1], ...items.slice(0, items.length -1)];
@@ -102,7 +100,7 @@ export default (state = initialState, action = {}) => {
                     return fwd;
                   }
 
-                  else if (offset < 0) { // backwards
+                  else if (offset < 0) { // backwards, TODO: amend with ...rest
                     const rev = [...Array(-offset).keys()].reduce(
                       (items, key) => {
                         return [...items.slice(1, items.length), items[0]];
@@ -150,6 +148,13 @@ export default (state = initialState, action = {}) => {
             [...state.items.slice(0, index), {...state.items[index], status:action.status}, ...state.items.slice(index + 1, state.items.length)]
         }
       }
+
+      case typesCarousel.UPDATE_DIRECTION:
+        return {
+          ...state,
+          direction:action.direction,
+          index:action.index
+        }
 
       default: 
         return state;

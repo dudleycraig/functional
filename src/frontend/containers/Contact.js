@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-const Contact = props => {
-  return (<section role="main" id="contact"></section>);
+class Contact extends Component {
+  render() {
+    return (<section role="main" id="contact"></section>)
+  }
 };
 
-const ContactContainer = connect(state => state)(Contact);
-
-export {ContactContainer as Contact};
+export default connect(state => state)(Contact);

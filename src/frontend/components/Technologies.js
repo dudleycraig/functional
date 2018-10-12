@@ -1,6 +1,6 @@
-/** components/Carousel **/
+/** components/Technologies **/
 
-import React from 'react';
+import React, {Component} from 'react';
 
 import {Redux, JQuery, JQueryUI, CLJS, Bootstrap, Clojure, MySQL, Cassandra, Datomic, Spring, Hybris, Reagent, Magento, Backbone, Zend, Bash, Postgres} from 'components/Svg';
 
@@ -24,7 +24,7 @@ import faPhp from '@fortawesome/fontawesome-free-brands/faPhp';
 import faDatabase from '@fortawesome/fontawesome-free-solid/faDatabase';
 import faNodeJs from '@fortawesome/fontawesome-free-brands/faNodeJs';
 
-library.add(faAngleDoubleRight, faAngleDoubleLeft, faSpinner, faArchive, faExclamation, faNodeJs);
+library.add(faNodeJs);
 
 const Technologies = props => {
   return (
@@ -55,72 +55,4 @@ const Technologies = props => {
   );
 }
 
-const Carousel = props => {
-  const itemWidth = 306; 
-
-  const updateItemStatusIcon = item => {
-    switch (item.status) {
-      case ('no-image'): return (<FontAwesomeIcon icon={faArchive} size="3x" />);
-      case ('loading'): return (<FontAwesomeIcon icon={faSpinner} size="3x" pulse />);
-      case ('has-image'): return ('');
-      case ('error'): return (<FontAwesomeIcon icon={faExclamation} size="3x" className="error" />);
-      default: return (<FontAwesomeIcon icon={faArchive} size="3x" />);
-    }
-  }
-
-  const fetchCarouselImageHandler = item => {
-    const target = document.getElementById('item-' + item.index).getElementsByClassName('item-image')[0];
-    const source = item.images['xs'];
-    if(!target.getAttribute('src') || target.getAttribute('src') === '') {
-      props.fetchCarouselImage(source, target, item);
-    }
-  }
-
-  const moveCarouselHandler = (update, direction) => {
-    const index = update > (props.carousel.items.length - 1) ? 0 : update < 0 ? (props.carousel.items.length - 1) : update;
-    const item = props.carousel.items[props.carousel.items.findIndex(item => item.index === index)];
-    props.moveCarousel(index, direction);
-    fetchCarouselImageHandler(item);
-  }
-
-  return (
-    <section id="carousel" className="content-section bg-primary text-white text-center flex-grow-1">
-      <div className="container">
-        <ul className="items row" style={{width:(itemWidth * (props.carousel.items.length)) + 'px'}}>
-        {props.carousel.items.length > 0 && props.carousel.items.map((item, index) => { return(
-          <li key={'item-' + item.index} id={'item-' + item.index} className={'d-flex flex-column item' + (index === props.carousel.active ? ' active' : '')}>
-            <div className="image-wrapper">
-              <img 
-                className="item-image"
-                width="400px"
-                height="300px"
-              />
-            </div>
-            <div className="caption flex-grow-1">
-              <h5>{item.header}</h5>
-              <p>{item.brief}</p>
-              <Technologies technologies={item.technologies} />
-            </div>
-            <div className="cover">{updateItemStatusIcon(item)}</div>
-          </li>
-        )})}
-        </ul>
-        <ul className="controls">
-          <li className="left">
-            <button type="button" onClick={event => moveCarouselHandler((props.carousel.index - 1), 'prev')}><FontAwesomeIcon icon={faAngleDoubleLeft} size="1x" /></button>
-          </li>
-          {props.carousel.items.length > 0 && props.carousel.items.slice().sort((a, b) => a.index - b.index).map((item, index) => { return(
-          <li className={'indicator d-none d-lg-inline' + (item.index === props.carousel.items[props.carousel.active].index ? ' active' : '')} key={'indicator-' + index}>
-            <button type="button" onClick={event => moveCarouselHandler(index, '')}>{item.header}</button>
-          </li>
-          )})}
-          <li className="right">
-            <button type="button" onClick={event => moveCarouselHandler((props.carousel.index + 1), 'next')}><FontAwesomeIcon icon={faAngleDoubleRight} size="1x" /></button>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-export default Carousel;
+export default Technologies;
