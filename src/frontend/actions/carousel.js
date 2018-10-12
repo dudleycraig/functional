@@ -10,12 +10,10 @@ import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation';
 
 library.add(faSpinner, faArchive, faExclamation);
 
-export const moveCarousel = (index, direction) => {
+export const sortCarousel = () => {
   return dispatch => {
     dispatch({
-      type:typesCarousel.MOVE_CAROUSEL, 
-      index:index,
-      direction:direction
+      type:typesCarousel.SORT_CAROUSEL 
     })
   }
 };
@@ -26,6 +24,16 @@ export const updateItemStatus = (item, status) => {
       type:typesCarousel.UPDATE_ITEM_STATUS,
       item:item,
       status:status
+    })
+  }
+}
+
+export const updateDirection = (direction, index) => {
+  return dispatch => {
+    dispatch({
+      type:typesCarousel.UPDATE_DIRECTION,
+      direction:direction,
+      index:index
     })
   }
 }

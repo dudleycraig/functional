@@ -8,141 +8,152 @@ section#carousel {
       position:relative;
       width:100%;
       height:500px;
-      overflow:hidden;
       margin:0 auto;
       padding:0;
       max-width:none;
+      overflow:hidden;
 
-      ul.items {
-         display:inline-block;
-         height:395px;
-
+      div.carousel-wrapper {
          position:absolute;
          top:2px;
-         left:-9999px;
-         right:-9999px;
+         left:-9999px; 
+         right:-9999px; 
          margin:0 auto;
-         padding:0;
 
-         white-space:nowrap;
-         list-style:none;
-         z-index:5;
+         display:block;
+         height:395px;
 
-         li.item {
-            display:inline-block;
-            float:left; 
-            clear:none;
-            position:relative;
-            width:302px;
+         text-align:center;
+
+         ul.items {
+            display:inline-block;;
             height:100%;
-            margin:0 2px 0 2px;
-            padding:0;
-            border-color:#666;
-            border-style:solid;
-            border-width:1px 1px 1px 1px;
-            border-radius:5px;
+            
+            position:relative;; 
 
-            div.image-wrapper {
-               display:inline-block;
-               width:300px;
-               height:229px;
-               line-height:229px;
-               overflow:hidden;
+            padding:0;
+            white-space:nowrap;
+            text-align:center;
+
+            list-style:none;
+            z-index:5;
+
+            li.item {
+               display:inline;
+               position:relative;
+               width:302px;
+               height:100%;
+               margin:0 2px 0 2px;
+               padding:0;
+               border-color:#666;
+               border-style:solid;
+               border-width:1px 1px 1px 1px;
                border-radius:5px;
 
-               img.item-image {
-                  width:300px;
-                  height:auto;
-                  border-radius:5px;
-                  vertical-align:middle;
-               }
-            }
+               float:left;
 
-            div.caption {
-               display:block;
-               overflow:hidden;
-               position:relative;
-
-               h5 {
-                  color:rgba(255, 255, 255, 1);
-               }
-
-               p {
-                  text-align:center;
-                  white-space:normal;
-                  padding:0 5px;
-                  font-size:0.8em;
-                  color:rgba(255, 255, 255, 0.5);
-               }
-
-               span.technologies {
+               div.image-wrapper {
                   display:inline-block;
-                  width:100%;
-                  position:absolute;
-                  bottom:0;
-                  left:0;
-                  z-index:8;
-                  text-align:center;
+                  width:300px;
+                  height:229px;
+                  line-height:229px;
+                  overflow:hidden;
+                  border-radius:5px;
 
-                  span.svg-wrapper {
-                     position:relative;
+                  img.item-image {
+                     width:300px;
+                     height:auto;
+                     border-radius:5px;
+                     vertical-align:middle;
+                  }
+               }
+
+               div.caption {
+                  display:block;
+                  overflow:hidden;
+                  position:relative;
+
+                  h5 {
+                     color:rgba(255, 255, 255, 1);
+                  }
+
+                  p {
+                     text-align:center;
+                     white-space:normal;
+                     padding:0 5px;
+                     font-size:0.8em;
+                     color:rgba(255, 255, 255, 0.5);
+                  }
+
+                  span.technologies {
                      display:inline-block;
-                     width:25px;
-                     height:30px;
-                     margin:0 2px;
-                     padding:0; 
+                     width:100%;
+                     position:absolute;
+                     bottom:0;
+                     left:0;
+                     z-index:8;
                      text-align:center;
 
-                     span.text, svg {
-                        position:absolute;
+                     span.svg-wrapper {
+                        position:relative;
                         display:inline-block;
-                        width:100%;
-                        z-index:2;
-                     }
+                        width:25px;
+                        height:30px;
+                        margin:0 2px;
+                        padding:0; 
+                        text-align:center;
 
-                     span.text {
-                        top:0;
-                        left:0;
-                        font-size:0.6em;
-                        font-weight:600;
-                     }
-                     
-                     svg {
-                        bottom:0;
-                        left:0;
+                        span.text, svg {
+                           position:absolute;
+                           display:inline-block;
+                           width:100%;
+                           z-index:2;
+                        }
 
-                        path {
+                        span.text {
+                           top:0;
+                           left:0;
+                           font-size:0.6em;
+                           font-weight:600;
+                        }
+                        
+                        svg {
+                           bottom:0;
+                           left:0;
+
+                           path {
+                           }
                         }
                      }
                   }
                }
-            }
 
-            div.cover {
-               display:block;
-               width:306px;
-               height:399px;
-               background:rgba(255, 255, 255, 0.3);
+               div.cover {
+                  display:block;
+                  width:306px;
+                  height:399px;
+                  background:rgba(255, 255, 255, 0.3);
 
-               position:absolute;
-               top:-3px;
-               left:-3px;
-               z-index:9;
+                  position:absolute;
+                  top:-3px;
+                  left:-3px;
+                  z-index:9;
 
-               border-radius:5px;
+                  border-radius:5px;
 
-               svg {
-                  display:inline-block;
-                  position:relative;
-                  top:100px;
-                  margin:0 auto;
+                  svg {
+                     display:inline-block;
+                     position:relative;
+                     top:100px;
+                     margin:0 auto;
+                  }
                }
             }
-         }
 
-         li.item.active {
-            div.cover {
-               background:transparent;
+            li.item.active {
+               div.cover {
+                  background:transparent;
+               }
             }
          }
       }
@@ -198,7 +209,5 @@ section#carousel {
             }
          }
       }
-
-
    }
 }
