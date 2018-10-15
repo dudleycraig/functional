@@ -14,7 +14,7 @@ const CarouselItem = props => {
         <p>{props.item.brief}</p>
         <Technologies technologies={props.item.technologies} />
       </div>
-      <div className="cover">{props.updateItemStatusIcon(props.item)}</div>
+      {/** <div className="cover">{props.updateItemStatusIcon(props.item)}</div> **/}
     </li>
   )
 }

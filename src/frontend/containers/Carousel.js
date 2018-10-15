@@ -51,7 +51,7 @@ class Carousel extends Component {
     this.props.sortCarousel();
   }
 
-  moveCarouselAnimate = (update, direction) => {
+  animateCarouselStart = (update, direction) => {
     const index = update > (this.props.carousel.items.length - 1) ? 0 : update < 0 ? (this.props.carousel.items.length - 1) : update;
     const items = document.getElementById('carousel-items');
     switch (direction) {
@@ -76,29 +76,35 @@ class Carousel extends Component {
     this.props.updateDirection(direction, index);
   }
 
-  moveCarouselAnimated = resolve => {
+  animateCarouselEnd = resolve => {
     document.getElementById('carousel-items').removeEventListener('transitionend', this.moveCarouselAnimated);
     resolve();
   }
 
-  moveCarouselInit = (update, direction) => {
+  animateCarousel = (update, direction) => {
     return new Promise((resolve, reject) => {
       document.getElementById('carousel-items').addEventListener(
         'transitionend', 
-        event => this.moveCarouselAnimated(resolve),
+        event => this.animateCarouselEnd(resolve),
         false
       );
-      this.moveCarouselAnimate(update, direction);
+      this.animateCarouselStart(update, direction);
     });
   }
 
-  moveCarouselHandler = (update, direction) => {
-    this.moveCarouselInit(update, direction)
+  // TODO:
+  // https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+  // add mousedown event listener
+  // add touchstart event listener
+  // add mouseup event listener
+  // add touchend event listener
+
+  clickControlHandler = (update, direction) => {
+    this.animateCarousel(update, direction)
     .then(() => {
       const item = this.props.carousel.items[this.props.carousel.items.findIndex(item => item.index === this.props.carousel.index)];
       this.sortItems();
       this.fetchCarouselImageHandler(item);
-      document.getElementById('carousel-items').removeEventListener('transitionend', );
     });
   }
 
@@ -117,28 +123,21 @@ class Carousel extends Component {
     return (
       <section id="carousel" className="content-section bg-primary text-white text-center flex-grow-1">
         <div className="container">
-          <div 
-            className="carousel-wrapper"
-            style={{
-                width:((itemWidth * (this.props.carousel.items.length)) + (itemWidth * 2)) + 'px',
-            }}
-          >
-            <ul 
-              className="items row" 
-              id="carousel-items"
-              style={{
-                  width:(itemWidth * (this.props.carousel.items.length)) + 'px'
-              }}
-              onMouseDown={this.onMouseDownHandler}
-              onTouchStart={this.onTouchStartHandler}
-            >{
+          <div className="carousel-wrapper" style={{width:((itemWidth * (this.props.carousel.items.length)) + (itemWidth * 2)) + 'px'}}>
+            <div 
+              className="cover left" 
+              style={{width:((itemWidth * (this.props.carousel.items.length + 1)) / 2) + 'px'}}
+            >&nbsp;</div>
+            <ul className="items row" id="carousel-items" style={{width:(itemWidth * (this.props.carousel.items.length)) + 'px'}} onMouseDown={this.onMouseDownHandler} onTouchStart={this.onTouchStartHandler}>{
               this.props.carousel.items.length > 0 && 
-              this.props.carousel.items.map((item, index) =>  
-                <CarouselItem key={'item-' + item.index} item={item} index={index} active={this.props.carousel.active} updateItemStatusIcon={this.updateItemStatusIcon} />
-              )
+              this.props.carousel.items.map((item, index) => <CarouselItem key={'item-' + item.index} item={item} index={index} active={this.props.carousel.active} updateItemStatusIcon={this.updateItemStatusIcon} />)
             }</ul>
+            <div 
+              className="cover right" 
+              style={{width:((itemWidth * (this.props.carousel.items.length + 1)) / 2) + 'px'}}
+            >&nbsp;</div>
           </div>
-          <CarouselControls carousel={this.props.carousel} moveCarouselHandler={this.moveCarouselHandler} />
+          <CarouselControls carousel={this.props.carousel} clickControlHandler={this.clickControlHandler} />
         </div>
       </section>
     );
