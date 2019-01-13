@@ -1,7 +1,8 @@
 {
-  "extends": ["eslint:recommended"],
+  "extends": ["airbnb"],
   "parser": "babel-eslint",
   "parserOptions": {
+    "sourceType": "module", 
     "ecmaVersion": 2018,
     "ecmaFeatures": {
       "jsx": true,
@@ -17,7 +18,6 @@
     "indent": 0,
     "quotes": 0,
     "linebreak-style": 0,
-    "semi": 0,
     "object-curly-spacing": 0,
     "no-trailing-spaces": 0,
     "keyword-spacing": 0,
@@ -30,16 +30,13 @@
     "browser": true,
     "jquery": true,
     "node": true,
-    "mocha": true,
     "es6": true
   },
   "globals": {
     "expect": true,
-    "sinon": true,
     "__DEV__": true
   },
   "plugins": [
-    "mocha",
     "react"
   ]
 }
