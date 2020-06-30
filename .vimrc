@@ -1,12 +1,21 @@
-setlocal expandtab tabstop=3 shiftwidth=3 textwidth=80
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+set path+=/home/dudley/Workspace/functional/**
+set tags=/home/dudley/Workspace/functional/tags
 
-" syntastic
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = 'node_modules/.bin/eslint --config .eslintrc.json --ignore-path .eslintignore '
+set backupdir=.vim/swap
+set directory=.vim/swap
+set undodir=.vim/undo
 
-" w0rp/ale
-" let g:ale_javascript_eslint_use_global=0
-" let g:ale_javascript_eslint_executable='node_modules/.bin/eslint'
-" let g:ale_javascript_eslint_options='--config .eslintrc.json --ignore-path .eslintignore'
+" ludovicchabant/vim-gutentags
+let g:gutentags_ctags_tagfile = 'tags'
+let g:gutentags_project_root = ['.git', '.vimrc']
+let g:gutentags_options_file = '.ctags'
 
+function! InterpretProjectIncludes(fname)
+  let fname = a:fname
+  if (fname =~# '^@')
+    let fname = substitute(fname,'^@','src/frontend/','')
+  endif
+  return fname
+endfunction
+
+set includeexpr=InterpretProjectIncludes(v:fname)
