@@ -5,6 +5,7 @@ logs
 npm-debug.log*
 .env
 .env*
+package-lock.json
 
 /engine
 /client/build
