@@ -10,7 +10,7 @@ export default () => {
         <img width="100px" height="100px" alt="dudley's ugly mug" src="images/profile.jpg" />
       </div>
       <p>
-        <b>Web Applications Developer</b> who enjoys a clean and simple approach.
+        Freelance <b>Web Applications Developer</b> who enjoys a clean and simple approach.
       </p>
       <Button className="mr-1" variant="outline-light" style={{ minWidth: '90px' }} onClick={() => history.push('/portfolio')}>
         Portfolio
