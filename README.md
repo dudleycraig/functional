@@ -1,7 +1,6 @@
-# skeleton 
-[functional.org.za](https://functional.org.za)
-
 ![dynamic screenshot](https://raw.githubusercontent.com/dudleycraig/functional/master/server/public/images/functional.org.za.gif)
+
+[functional.org.za](https://functional.org.za)
 
 ## installation
 
