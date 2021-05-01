@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+@import '~bootswatch/dist/slate/_variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootswatch/dist/slate/_bootswatch.scss';
+
+$spinner: '../../public/images/spinner.gif';
+
+@import 'header.scss';
+@import 'footer.scss';
+@import 'home.scss';
+@import 'portfolio.scss';
+
+body,
+html {
+}
+div#react {
+  margin-top: 70px; // leave space on each page for top navbar
+}
+
+// prevent iphone expanding page on input focus
+.input-group,
+.input-group-prepend,
+.input-group-text,
+.form-control {
+  font-size: 1.1em;
+}
+
+// remove border events
+.btn,
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.modal-90w {
+  max-width: 90% !important;
+}
+
+.modal-80w {
+  max-width: 80% !important;
+}
+
+.info {
+  color: inherit;
+}
+
+.error {
+  color: red;
+}
+
+.warning {
+  color: orange;
+}
+
+.success {
+  color: #93c54b;
+}
+
+div#app {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  header {
+    z-index: 90;
+  }
+
+  main {
+    z-index: 1;
+  }
+
+  footer {
+    z-index: 90;
+  }
+}

@@ -1,0 +1,118 @@
+/** styles/technical-skills **/
+
+section#technical-skills {
+  margin: 0 0 41px 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #7b7971;
+  flex-grow: 1;
+
+  div.container {
+    padding: 0;
+
+    div.content-section-heading {
+      border-bottom: 1px solid #222;
+
+      h3.mb-0 {
+        color: #ecb807 !important;
+        text-transform: uppercase;
+        font-size: 1.2em;
+      }
+      h2.mb-5 {
+        margin: 0 !important;
+      }
+    }
+
+    div.row {
+      margin: 0;
+      @media (max-width: 768px) {
+        padding-bottom: 41px;
+      }
+
+      div.col-lg-3,
+      div.col-lg-12 {
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #222;
+
+        h4 {
+          margin-top: 5px;
+          display: inline-block;
+          height: 64px;
+        }
+
+        p {
+          display: inline-block;
+          margin: 0;
+          width: 100%;
+          clear: both;
+          @media (min-width: 768px) {
+            height: 120px;
+          }
+          @media (max-width: 768px) {
+            padding-bottom: 20px;
+          }
+        }
+
+        > span {
+          span.svg-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 44px;
+            margin: 0 2px;
+            padding: 0;
+            text-align: center;
+
+            span.text,
+            svg {
+              position: absolute;
+              display: inline-block;
+              width: 100%;
+              z-index: 2;
+            }
+
+            span.text {
+              top: 0;
+              left: 0;
+              font-size: 0.6em;
+              font-weight: 600;
+            }
+
+            svg {
+              bottom: 0;
+              left: 0;
+
+              path {
+              }
+            }
+          }
+        }
+      }
+
+      div.col-lg-3,
+      div.col-md-6,
+      div.mb-6 {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+svg#three-icon {
+  .st0 {
+    fill: #ffffff;
+  }
+  .st1 {
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 7;
+    stroke-miterlimit: 10;
+  }
+  .st2 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 7;
+    stroke-miterlimit: 10;
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "functional",
+  "title": "functional",
+  "version": "2.0.0",
+  "description": "freelance development at functional.org.za",
+  "private": true,
+  "homepage": ".",
+  "keywords": [
+    "javascript",
+    "react",
+    "hooks",
+    "webgl",
+    "three",
+    "bootstrap",
+    "node",
+    "express",
+    "arduino language",
+    "3d print",
+    "fritzing",
+    "cura",
+    "blender",
+    "inkscape",
+    "gimp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dudleycraig/functional.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dudleycraig/functional/issues",
+    "email": "dudleycraig@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Dudley Craig",
+  "contributors": [],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "bootstrap": "^4.5.3",
+    "bootswatch": "^4.5.2",
+    "node-sass": "^4.14.1",
+    "nodemailer": "^6.5.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "zustand": "^3.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <=11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.15",
+    "react-router": "^5.2.0",
+    "webpack": "^4.42.0"
+  }
+}

@@ -1,16 +1,14 @@
 
-/node_modules
-/logs
+node_modules/
+logs
 *.log
 npm-debug.log*
 
-/public/fonts
-/public/index.js
-/public/css
+/engine
+/client/build
 
 # vim
 /sessions
-*.vim
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
