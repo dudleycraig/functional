@@ -10,7 +10,7 @@ export default () => {
     <footer id="footer" className="navbar navbar-expand-lg fixed-bottom navbar-dark bg-primary">
       <div className="navbar-navbar d-none d-md-inline">© 2018 Dudley Craig</div>
       <div className="nav mx-auto ml-md-auto mr-md-0">
-        <a href="https://github.com/dudleycraig/" className="hint--top" data-hint="GitHub">
+        <a href="https://github.com/dudleycraig/functional" className="hint--top" data-hint="GitHub">
           <FontAwesomeIcon icon={faGithubSquare} size="2x" />
         </a>
         <a href="mailto:dudleycraig@gmail.com" className="hint--top" data-hint="Email">
