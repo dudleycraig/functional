@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node ./bin/www",
-    "build": "cd ../client && npm install && npm run build && cd ../../solenoid-engine && npm install && npm run build && cp -rvf ./build/* ../functional/engine/build/"
+    "start": "nodemon --exec babel-node ./bin/www"
   },
   "dependencies": {
     "aedes": "^0.46.0",
