@@ -1,6 +1,6 @@
 ![dynamic screenshot](https://raw.githubusercontent.com/dudleycraig/functional/master/server/public/images/functional.org.za.gif)
 
-[functional.org.za](https://functional.org.za)
+[functional.org.za](http://functional.org.za)
 
 ## installation
 
