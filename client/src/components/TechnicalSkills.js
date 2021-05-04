@@ -39,7 +39,7 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faCode} size="3x" />
             </h4>
-            <p>Responsive, "mobile first" approach to ui/ux design utilizing Bootstrap.</p>
+            <p>Responsive, "mobile first" approach to ui/ux. Utilizing both Bootstrap and Styled-Components.</p>
             <span className="mx-auto mb-3">
               <span className="svg-wrapper" title="html5">
                 <span className="text">HTML</span>
@@ -62,7 +62,7 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faCogs} size="3x" />
             </h4>
-            <p>Realtime backend API development.</p>
+            <p>Building of either stateful, or stateless distributed services via REST, GraphQL or custom APIs.</p>
             <span className="mx-auto mb-3">
               <span className="svg-wrapper" title="node">
                 <FontAwesomeIcon icon={faNodeJs} size="2x" />
@@ -80,7 +80,7 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faDatabase} size="3x" />
             </h4>
-            <p>Scheme development on RDBMS, NoSQL and middle-ware structures.</p>
+            <p>Scheme development on RDBMS, NoSQL or middle-ware structures.</p>
             <span className="mx-auto mb-3">
               <span className="svg-wrapper" title="mysql">
                 <MySQL />
