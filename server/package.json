@@ -6,21 +6,31 @@
     "start": "nodemon --exec babel-node ./bin/www"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "apollo-server": "^2.24.0",
     "babel-node": "0.0.1-security",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
-    "dotenv": "^8.2.0",
-    "express": "~4.16.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.16.4",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^4.0.8",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.7",
     "morgan": "~1.9.1",
     "mqtt": "^4.2.6",
     "nodemailer": "^6.5.0",
-    "nodemon": "^2.0.7",
+    "shortid": "^2.2.16",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
     "uuid": "^8.3.2",
+    "validation": "0.0.1",
     "websocket": "^1.0.34"
   },
   "browserslist": [
@@ -32,7 +42,8 @@
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/node": "^7.13.13",
-    "@babel/preset-env": "^7.13.15"
+    "@babel/preset-env": "^7.13.15",
+    "nodemon": "^2.0.7"
   },
   "engines": {
     "node": "14.5.0"

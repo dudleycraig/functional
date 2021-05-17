@@ -1,5 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
+const ApolloServer = require('apollo-server').ApolloServer;
+const mongoose = require('mongoose');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -20,12 +22,13 @@ app.all('/', function (req, res, next) {
   next();
 });
  **/
+
+app.use(express.json());
 app.use(cors());
 app.set(port, port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
