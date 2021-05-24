@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faImages, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Functional } from './Svg';
 import { Navbar, Nav } from 'react-bootstrap';
 import useStore from '../store';
 
@@ -22,7 +23,8 @@ const Header = () => {
     <header id="main-header" className="bs-component text-center" style={{ background: 'red' }}>
       <Navbar id="main-navigation" className="navbar-dark bg-primary display-flex justify-content-center" variant="dark" expand="md" fixed="top" collapseOnSelect>
         <Nav.Link className="navbar-brand mr-0 mr-md-1 ml-md-auto ml-0" onClick={() => history.push('/home')}>
-          functional.org.za
+          <b>𝑓</b>
+          unctional.org.za
         </Nav.Link>
         <Nav className="justify-content-left flex-row ml-md-5 ml-0 mr-md-auto mr-0">
           {Object.keys(navigation.pages).map((key) => (

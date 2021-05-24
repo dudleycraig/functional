@@ -23,6 +23,7 @@ $spinner: '../../public/images/spinner.gif';
 
 body,
 html {
+  overflow-y: scroll;
 }
 div#react {
   margin-top: 70px; // leave space on each page for top navbar
