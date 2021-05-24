@@ -55,13 +55,38 @@ section#technical-skills {
         }
 
         > span {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          > a {
+            height: 40px;
+            line-height: 40px;
+            padding: 0;
+            margin: 0 2px;
+            .tech-icon {
+              vertical-align: middle;
+              color: #aaaaaa;
+              fill: #aaaaaa;
+            }
+            .tech-icon#webgl-icon {
+              width: 50px;
+            }
+          }
+
+          > a:hover {
+            .tech-icon {
+              color: #ffffff;
+              fill: #ffffff;
+            }
+          }
+
           span.svg-wrapper {
             position: relative;
             display: inline-block;
-            width: 40px;
             height: 44px;
             margin: 0 2px;
             padding: 0;
+
             text-align: center;
 
             span.text,

@@ -1,0 +1,9 @@
+.app-body {
+  @media only print {
+    .app-body-left-column {
+    }
+    .app-body-right-column {
+      display: none;
+    }
+  }
+}

@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
-import Technologies from './Technologies';
+import useStore from '../store';
 import Image from './Image';
 import ItemModal from './ItemModal';
+import TechIcon from './TechIcon';
 
 export default ({ item, ...props }) => {
   const assets = `${process.env.REACT_APP_ASSETS_PROTOCOL}://${process.env.REACT_APP_ASSETS_HOST}:${process.env.REACT_APP_ASSETS_PORT}`;
+  const tech = useStore((state) => state.tech);
   const [showModal, setShowModal] = useState(false);
   const [isGTSmall, setIsGTSmall] = useState(window.matchMedia('(min-width: 768px)').matches);
 
@@ -37,14 +39,21 @@ export default ({ item, ...props }) => {
         <Card.Body className="pt-1" style={{ cursor: 'grabbing' }}>
           <Card.Text className="small p-0 m-0">{item.brief}</Card.Text>
         </Card.Body>
-        <Card.Footer style={{ position: 'relative', bottom: '0px', display: 'inline-block', verticalAlign: 'middle', height: '65px', minHeight: '65px', lineHeight: '65px', margin: 0 }}>
-          <Technologies technologies={item.technologies} />
+        <Card.Footer className="carousel-item-footer">
+          {item.technologies.map(
+            (technology, index) =>
+              tech[technology] && (
+                <a key={`portfolio-item-${index}`} href={`/resume/${tech[technology].link}`}>
+                  <TechIcon name={tech[technology].icon} title={tech[technology].description} />
+                </a>
+              )
+          )}
           {isGTSmall ? (
-            <Button className="btn btn-sm" style={{ position: 'relative', verticalAlign: 'middle', float: 'right', clear: 'right', margin: '0px' }} onClick={toggleModal}>
+            <Button className="btn btn-sm" onClick={toggleModal}>
               details
             </Button>
           ) : (
-            <Button className="btn btn-sm" style={{ position: 'relative', verticalAlign: 'middle', float: 'right', clear: 'right', margin: '0px', maxWidth: '100px', padding: '0px 2px' }} onClick={toggleModal} variant="warning" disabled>
+            <Button className="btn btn-sm" style={{ maxWidth: '100px', padding: '0px 2px' }} onClick={toggleModal} variant="warning" disabled>
               details on larger screens
             </Button>
           )}

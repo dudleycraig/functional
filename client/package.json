@@ -5,7 +5,27 @@
   "description": "freelance development at functional.org.za",
   "private": true,
   "homepage": ".",
-  "keywords": ["react", "blender", "webgl", "three", "gis", "qgis", "leaflet", "cesium", "bootstrap", "node", "express", "apollo", "graphql", "arduino", "3d print", "fritzing", "cura", "inkscape", "gimp"],
+  "keywords": [
+    "react",
+    "blender",
+    "webgl",
+    "three",
+    "gis",
+    "qgis",
+    "leaflet",
+    "cesium",
+    "bootstrap",
+    "node",
+    "express",
+    "apollo",
+    "graphql",
+    "arduino",
+    "3d print",
+    "fritzing",
+    "cura",
+    "inkscape",
+    "gimp"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dudleycraig/functional.git"
@@ -33,6 +53,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "redocx": "^1.1.4",
     "zustand": "^3.3.1"
   },
   "scripts": {
@@ -44,7 +65,12 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <=11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <=11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/node": "^7.13.13",

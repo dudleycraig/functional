@@ -3,11 +3,12 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs, faCss3Alt, faSass, faReact, faJava, faPhp, faHtml5, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faCogs, faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { Redux, Bootstrap, MySQL, Cassandra, Datomic, Three } from './Svg';
+import useStore from '../store';
+import TechIcon from './TechIcon';
 
 export default () => {
+  const tech = useStore((state) => state.tech);
   return (
     <section id="technical-skills" className="content-section bg-primary text-white text-center flex-grow-1">
       <span id="technical-skills-hash" style={{ position: 'absolute', top: '-70px' }} />
@@ -19,19 +20,19 @@ export default () => {
         <div className="row">
           <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
             <h4>
-              <FontAwesomeIcon icon={faJs} size="3x" />
+              <TechIcon name={tech['javascript'].icon} title={tech['javascript'].description} style={{ width: '66px', height: '66px', fill: '#ffffff' }} />
             </h4>
-            <p>Specializing in functional, hooks based, React development.</p>
+            <p>Front-end React development of 3D and GIS applications.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper" title="react">
-                <FontAwesomeIcon icon={faReact} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="redux / zustand">
-                <Redux />
-              </span>
-              <span className="svg-wrapper" title="three">
-                <Three />
-              </span>
+              <a href={`/resume/${tech['react'].link}`}>
+                <TechIcon name={tech['react'].icon} title={tech['react'].description} />
+              </a>
+              <a href={`/resume/${tech['webgl'].link}`}>
+                <TechIcon name={tech['webgl'].icon} title={tech['webgl'].description} />
+              </a>
+              <a href={`/resume/${tech['gis'].link}`}>
+                <TechIcon name={tech['gis'].icon} title={tech['gis'].description} />
+              </a>
             </span>
           </div>
 
@@ -39,22 +40,17 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faCode} size="3x" />
             </h4>
-            <p>Responsive, "mobile first" approach to ui/ux. Utilizing both Bootstrap and Styled-Components.</p>
+            <p>Responsive, "mobile first" layouts.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper" title="html5">
-                <span className="text">HTML</span>
-                <FontAwesomeIcon icon={faHtml5} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="css3">
-                <span className="text">CSS</span>
-                <FontAwesomeIcon icon={faCss3Alt} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="sass">
-                <FontAwesomeIcon icon={faSass} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="bootstrap">
-                <Bootstrap />
-              </span>
+              <a href={`/resume/${tech['bootstrap'].link}`}>
+                <TechIcon name={tech['bootstrap'].icon} title={tech['bootstrap'].description} />
+              </a>
+              <a href={`/resume/${tech['mobile'].link}`}>
+                <TechIcon name={tech['mobile'].icon} title={tech['webgl'].description} />
+              </a>
+              <a href={`/resume/${tech['desktop'].link}`}>
+                <TechIcon name={tech['desktop'].icon} title={tech['webgl'].description} />
+              </a>
             </span>
           </div>
 
@@ -62,17 +58,17 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faCogs} size="3x" />
             </h4>
-            <p>Building of either stateful, or stateless distributed services via REST, GraphQL or custom APIs.</p>
+            <p>Back-end integration of multiple resources into a consolidated stream.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper" title="node">
-                <FontAwesomeIcon icon={faNodeJs} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="java">
-                <FontAwesomeIcon icon={faJava} size="2x" />
-              </span>
-              <span className="svg-wrapper" title="php">
-                <FontAwesomeIcon icon={faPhp} size="2x" />
-              </span>
+              <a href={`/resume/${tech['express'].link}`}>
+                <TechIcon name={tech['express'].icon} title={tech['express'].description} style={{ width: '50px' }} />
+              </a>
+              <a href={`/resume/${tech['linux'].link}`}>
+                <TechIcon name={tech['linux'].icon} title={tech['linux'].description} />
+              </a>
+              <a href={`/resume/${tech['docker'].link}`}>
+                <TechIcon name={tech['docker'].icon} title={tech['docker'].description} />
+              </a>
             </span>
           </div>
 
@@ -80,21 +76,21 @@ export default () => {
             <h4>
               <FontAwesomeIcon icon={faDatabase} size="3x" />
             </h4>
-            <p>Scheme development on RDBMS, NoSQL or middle-ware structures.</p>
+            <p>Schema modelling on both normalized and denormalized structures.</p>
             <span className="mx-auto mb-3">
-              <span className="svg-wrapper" title="mysql">
-                <MySQL />
-              </span>
-              <span className="svg-wrapper" title="cassandra">
-                <Cassandra />
-              </span>
-              <span className="svg-wrapper" title="datomic">
-                <Datomic />
-              </span>
+              <a href={`/resume/${tech['schema-design'].link}`}>
+                <TechIcon name={tech['schema-design'].icon} title={tech['schema-design'].description} />
+              </a>
+              <a href={`/resume/${tech['mongodb'].link}`}>
+                <TechIcon name={tech['mongodb'].icon} title={tech['mongodb'].description} />
+              </a>
+              <a href={`/resume/${tech['graphql-server'].link}`}>
+                <TechIcon name={tech['postgresql'].icon} title={tech['postgresql'].description} />
+              </a>
             </span>
           </div>
         </div>
-        <div className="row d-none d-lg-block">
+        <div className="row d-none d-md-block">
           <div className="col-lg-12 col-md-12 mb-5 mb-lg-0" style={{ borderBottom: 'none' }}></div>
         </div>
       </div>

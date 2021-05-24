@@ -5,8 +5,8 @@ import useStore from '../store';
 import { Row, Col } from 'react-bootstrap';
 
 import useDrag from '../hooks/useDrag';
-import CarouselItem from './CarouselItem';
 import ControlItems from './ControlItems';
+import CarouselItem from './CarouselItem';
 
 const range = (from, to) => Array.from({ length: to - from + 1 }, (v, k) => k + from);
 

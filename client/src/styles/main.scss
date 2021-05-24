@@ -14,16 +14,33 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 $spinner: '../../public/images/spinner.gif';
 
+@import 'app.scss';
 @import 'header.scss';
 @import 'footer.scss';
 @import 'home.scss';
 @import 'portfolio.scss';
+@import 'resume.scss';
 
 body,
 html {
 }
 div#react {
   margin-top: 70px; // leave space on each page for top navbar
+}
+
+@media only print {
+  body,
+  html {
+    background: none !important;
+    color: #000000 !important;
+  }
+  h1,
+  h2,
+  h3,
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
 }
 
 // prevent iphone expanding page on input focus

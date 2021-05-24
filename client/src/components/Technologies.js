@@ -4,7 +4,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faHtml5, faJs, faCss3Alt, faSass, faReact, faJava, faPhp, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { Redux, GraphQL, JQuery, JQueryUI, CLJS, Bootstrap, Clojure, MySQL, Cassandra, Datomic, Spring, Hybris, Reagent, Magento, Backbone, Zend, Bash, Postgres, StyledComponents, TypeScript } from './Svg';
+import { Redux, GraphQL, JQuery, JQueryUI, CLJS, Bootstrap, Clojure, MySQL, Cassandra, Datomic, Spring, Hybris, Reagent, Magento, Backbone, Zend, Bash, PostgreSQL, StyledComponents, TypeScript } from './Svg';
 
 export default (props) => {
   return (
@@ -134,7 +134,7 @@ export default (props) => {
           case 'postgres':
             return (
               <span key={'technology-' + index} title="postgres" className="svg-wrapper">
-                <Postgres />
+                <PostgreSQL />
               </span>
             );
           case 'graphql':

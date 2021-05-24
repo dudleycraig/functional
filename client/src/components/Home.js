@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import Overview from './Overview';
 
 export default () => {
   const history = useHistory();
@@ -9,9 +10,7 @@ export default () => {
       <div className="profile">
         <img width="100px" height="100px" alt="dudley's ugly mug" src="images/profile.jpg" />
       </div>
-      <p>
-        Freelance <b>Web Applications Developer</b> who enjoys a clean and simple approach.
-      </p>
+      <Overview />
       <Button className="mr-1" variant="outline-light" style={{ minWidth: '90px' }} onClick={() => history.push('/portfolio')}>
         Portfolio
       </Button>

@@ -12,6 +12,46 @@
       }
     }
   }
+  .carousel-item {
+    .carousel-item-footer {
+      height: 65px;
+      max-height: 65px;
+      padding: 0 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      > a {
+        height: 30px;
+        margin: 1px;
+        padding: 0;
+        > .tech-icon {
+          width: 30px;
+          height: 100%;
+          color: #aaaaaa;
+          fill: #aaaaaa;
+          polyline {
+            fill: #aaaaaa;
+          }
+        }
+        > .tech-icon#webgl-icon {
+          width: 50px;
+        }
+      }
+      > a:hover {
+        > .tech-icon {
+          color: #ffffff;
+          fill: #ffffff;
+          polyline {
+            fill: #ffffff;
+          }
+        }
+      }
+      > button.btn {
+        margin-left: auto;
+      }
+    }
+  }
 }
 
 div#item-modal.modal-dialog {

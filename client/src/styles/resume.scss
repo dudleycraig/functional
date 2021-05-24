@@ -1,0 +1,156 @@
+section#resume {
+  @media only print {
+    #identification {
+      .gmt {
+        display: none !important;
+      }
+    }
+  }
+
+  @media only print {
+    .resume-alt-nav {
+      display: none;
+    }
+  }
+
+  .project-header {
+  }
+
+  .project-body.accordion {
+    margin-bottom: 20px;
+  }
+
+  @media only print {
+    .project-header {
+    }
+
+    .project-body.accordion {
+      .card {
+        background: none !important;
+        span[role='button'] {
+          .card-header {
+            background: #eeeeee;
+            .round-button {
+              display: none;
+            }
+          }
+        }
+        .collapse {
+          display: block;
+
+          .card-body {
+            img,
+            svg {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    #skills-header {
+      height: 30px;
+      line-height: 30px;
+      padding-right: 12px;
+    }
+    #skills-body {
+      width: 100%;
+      height: 400px;
+      padding-right: 3px;
+      overflow-y: scroll;
+      border: 1px solid #000000;
+      border-radius: 3px;
+      background: #32383e;
+      .skills-body-row {
+        height: 30px;
+        line-height: 30px;
+        margin: 3px 0 3px 0;
+        .skills-body-icon {
+          svg {
+            fill: #aaaaaa;
+            polyline {
+              fill: #aaaaaa;
+            }
+          }
+        }
+
+        .skills-body-current {
+          width: 70px;
+          height: 100%;
+          line-height: 30px;
+          > div {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            vertical-align: middle;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #888888;
+            border-radius: 8px;
+            background: #999999;
+            margin: 0 auto;
+          }
+        }
+
+        .skills-body-proficiency {
+          border: 1px solid #141619;
+          border-radius: 3px;
+        }
+      }
+
+      .skills-body-row:hover {
+        color: rgba(255, 255, 255, 1);
+        background: rgba(200, 200, 200, 0.01);
+      }
+
+      .skills-body-row:hover .skills-body-current > div {
+        border-color: #ffffff;
+        background: #ffffff;
+      }
+      .skills-body-row:hover .skills-body-icon > svg.tech-icon {
+        fill: #ffffff;
+        polyline {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  @media only print {
+    #skills {
+      #skills-header {
+      }
+      #skills-body {
+        background: none !important;
+        height: auto !important;
+        overflow-y: unset !important;
+        .skills-body-row {
+          .skills-body-icon {
+            svg {
+              color: #000000;
+              fill: #000000;
+              polyline {
+                fill: #222222;
+              }
+            }
+          }
+          .skills-body-name {
+          }
+          .skills-body-experience {
+            .experience {
+              pre.years {
+                border: none;
+              }
+            }
+          }
+          .skills-body-current {
+          }
+          .skills-body-proficiency {
+          }
+        }
+      }
+    }
+  }
+}
