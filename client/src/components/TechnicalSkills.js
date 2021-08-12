@@ -22,7 +22,7 @@ export default () => {
             <h4>
               <TechIcon name={tech['javascript'].icon} title={tech['javascript'].description} style={{ width: '66px', height: '66px', fill: '#ffffff' }} />
             </h4>
-            <p>Front-end React development of 3D and GIS applications.</p>
+            <p>Front-end React/Re-Frame development of 3D and GIS applications.</p>
             <span className="mx-auto mb-3">
               <a href={`/resume/${tech['react'].link}`}>
                 <TechIcon name={tech['react'].icon} title={tech['react'].description} />

@@ -852,6 +852,16 @@ const useStore = create((set, get) => {
         proficiency: 4,
         current: false,
       },
+      reframe: {
+        link: '#tech-reframe',
+        text: 'Re-Frame',
+        title: 'Re-Frame',
+        description: 'Clojure derivative of React and Redux.',
+        icon: 'Clojure',
+        months: 6,
+        proficiency: 4,
+        current: false,
+      },
       datomic: {
         link: '#tech-datomic',
         text: 'Datomic',
