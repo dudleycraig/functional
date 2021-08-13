@@ -55,6 +55,10 @@ export default () => {
         CORE TECH
       </dt>
       <dd className="text-left" style={{ float: 'left' }}>
+        <TechLink name="reframe" />
+        {', '}
+        <TechLink name="Ring" />
+        {', '}
         <TechLink name="react" />
         {', '}
         <TechLink name="express" />
