@@ -51,6 +51,18 @@ REACT_APP_ENGINE_PORT=80
 
 ### build client
 
+#### requirements
+node-sass requires python 2.7
+edit /client/.npmrc repository with following line: python="/usr/local/bin/python2.7"
+
+node-sass requires node 14
+install nvm (Node Version Manager)
+install node version v14.21.3, 
+> nvm install v14.21.3
+toggle to installed version 
+> nvm use v14.21.3
+
+#### compile 
 > cd client && npm run install && npm run build
 
 ### build server 

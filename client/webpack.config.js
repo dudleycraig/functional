@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 process.stdout.write('----------------------------------------------------------------\n');
-process.stdout.write('---                    functional.org.za                     ---\n');
+process.stdout.write('---                 functional.org.za                        ---\n');
 process.stdout.write('---                                                          ---\n');
 process.stdout.write('---    tech: es6, react, redux, jest, eslint, bootstrap      ---\n');
 process.stdout.write('---   theme: https://bootswatch.com/sandstone                ---\n');
