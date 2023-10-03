@@ -40,7 +40,7 @@ const useStore = create((set, get) => {
         })),
     },
     carousel: {
-      midIndex: 3,
+      midIndex: 4,
       setMidIndex: (midIndex) => set((state) => ({ carousel: { ...state.carousel, midIndex: midIndex } })),
       shift: (direction) => {
         switch (direction) {
@@ -258,6 +258,42 @@ const useStore = create((set, get) => {
           header: 'Glanbia',
           brief: 'Java backend of B2B eCommerce on Hybris (spring) of address and payment models.',
           technologies: ['spring-boot', 'hybris', 'postgresql'],
+        },
+        {
+          name: 'opscore',
+          duration: { from: '2021', to: '2021' },
+          active: false,
+          images: {
+            xs: [{ status: 'no-image', src: 'images/portfolio/glanbia/xs.glanbia.png' }],
+            lg: [
+              {
+                status: 'no-image',
+                description: 'Java backend of B2B eCommerce on Hybris (spring) of address and payment models.',
+                src: 'images/portfolio/glanbia/lg.glanbia.png',
+              },
+            ],
+          },
+          header: 'OpsCore',
+          brief: 'Javascript serverless frontend mining resource management using firebase.',
+          technologies: ['javascript', 'firebase', 'react'],
+        },
+        {
+          name: 'vbt',
+          duration: { from: '2022', to: '2022' },
+          active: false,
+          images: {
+            xs: [{ status: 'no-image', src: 'images/portfolio/glanbia/xs.glanbia.png' }],
+            lg: [
+              {
+                status: 'no-image',
+                description: 'Java backend of B2B eCommerce on Hybris (spring) of address and payment models.',
+                src: 'images/portfolio/glanbia/lg.glanbia.png',
+              },
+            ],
+          },
+          header: 'Very Big Things',
+          brief: 'Clojure/ClojureScript development of blockchain B2C and B2B mobile applications.',
+          technologies: ['clojure', 'clojurescript', 'react-native', 'helix', 'keechma.next', 'tailwindcss'],
         },
       ],
     },
