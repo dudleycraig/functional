@@ -57,10 +57,14 @@ edit /client/.npmrc repository with following line: python="/usr/local/bin/pytho
 
 node-sass requires node 14
 install nvm (Node Version Manager)
+
 install node version v14.21.3, 
 > nvm install v14.21.3
+
 toggle to installed version 
 > nvm use v14.21.3
+
+NOTE: development port is actually changed in package.json/scripts/start and not webpack.config.js/devServer
 
 #### compile 
 > cd client && npm run install && npm run build

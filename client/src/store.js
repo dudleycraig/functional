@@ -67,6 +67,9 @@ const useStore = create((set, get) => {
               },
             }));
             break;
+
+          default: 
+            { }
         }
       },
       item: {

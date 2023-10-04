@@ -13,7 +13,7 @@ export default ({ items, shift }) => (
     {[...items]
       .sort((a, b) => a.name.localeCompare(b.name))
       .map((item) => (
-        <Button key={`control-item-${item.name}`} className={`btn btn-secondary btn-lg d-none d-lg-inline ${item.active ? 'active' : ''}`} onClick={() => shift('shuffle', item)}>
+        <Button key={`control-item-${item.name}`} className={`btn btn-secondary btn-sm d-none d-lg-inline ${item.active ? 'active' : ''}`} onClick={() => shift('shuffle', item)}>
           {item.header}
         </Button>
       ))}

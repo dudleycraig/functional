@@ -118,7 +118,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     inline: true,
     hot: true,
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3001,
     disableHostCheck: true,
   },

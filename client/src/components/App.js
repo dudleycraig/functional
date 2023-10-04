@@ -24,7 +24,7 @@ export default () => {
     <Router>
       <Header />
       <Container className="app-body text-center">
-        <Row>
+        <Row className="app-body-header">
           <Col className="col-xl-10 col-12" style={{ maxWidth: '920px' }}>
             {navigation.pages[page] !== undefined ? (
               <h2 className="h1-responsive font-weight-bold text-center my-0 d-inline" style={{ color: 'white', opacity: 0.9 }}>
@@ -38,7 +38,7 @@ export default () => {
           </Col>
           <Col className="col-xl-2 d-xl-inline d-none">&nbsp;</Col>
         </Row>
-        <Row style={{ minHeight: '434px' }}>
+        <Row className="app-body-content" style={{ minHeight: '434px' }}>
           <Col className="app-body-left-column col-xl-10 col-12 mb-md-0 mb-5" style={{ maxWidth: '920px' }}>
             <Switch>
               <Route exact path="/" component={Home} />

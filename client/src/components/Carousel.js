@@ -51,7 +51,7 @@ export default () => {
   };
 
   return (
-    <div id="carousel" style={{ marginTop: '20px' }}>
+    <div id="carousel">
       <div className="carousel-window" style={{ position: 'relative', width: '100%', height: '323px', overflow: 'hidden' }}>
         <div className="carousel-wrapper mx-auto" style={{ position: 'absolute', left: '-9999px', right: '-9999px' }}>
           <Row className="carousel-items d-inline-flex px-0 mx-0 align-items-stretch" style={{ width: `${items.length * itemWidth}px`, height: '310px' }} ref={carouselItemsRef}>
