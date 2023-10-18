@@ -51,6 +51,8 @@ import {
   SpringBoot,
   Tomcat,
   SchemaDesign,
+  Tailwindcss,
+  Firebase,
 } from './Svg';
 
 export default ({ name, ...props }) => {
@@ -103,6 +105,8 @@ export default ({ name, ...props }) => {
     SpringBoot,
     Tomcat,
     SchemaDesign,
+    Tailwindcss,
+    Firebase,
   };
 
   if (Object.keys(iAwesome).find((key) => key === name)) return <FontAwesomeIcon className="tech-icon" icon={iAwesome[name]} size="2x" {...props} />;

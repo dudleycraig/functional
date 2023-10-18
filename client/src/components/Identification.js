@@ -55,13 +55,13 @@ export default () => {
         CORE TECH
       </dt>
       <dd className="text-left" style={{ float: 'left' }}>
-        <TechLink name="reframe" />
+        <TechLink name="clojure" />/<TechLink name="clojurescript" />
         {', '}
-        <TechLink name="Ring" />
+        <TechLink name="integrant" />
         {', '}
-        <TechLink name="react" />
+        <TechLink name="helix" />
         {', '}
-        <TechLink name="express" />
+        <TechLink name="tailwindcss" />
       </dd>
     </dl>
   );

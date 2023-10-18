@@ -8,20 +8,20 @@ export default () => (
         Linux
       </a>
       {'-based, '}
-      <a href="/resume/#tech-reframe" title="library for building UX.">
-        Ring
+      <a href="/resume/#tech-clojure" title="a robust, practical, and fast programming language.">
+       Clojure 
       </a>
       {'/'}
-      <a href="/resume/#tech-reframe" title="library for building UX.">
-        Re-Frame
+      <a href="/resume/#tech-clojurescript" title="a compiler for clojure that targets javascript.">
+        Clojurescript 
       </a>
       {' or '}
-      <a href="/resume/#tech-express" title="framework for web applications">
-        Express
+      <a href="/resume/#tech-express" title="javascript runtime.">
+        Node.js
       </a>
       {'/'}
-      <a href="/resume/#tech-react" title="library for building UX.">
-        React
+      <a href="/resume/#tech-react" title="javascript with syntax for types.">
+       Typescript 
       </a>
       {' full-stack. I deliver applications rich in '}
       <a href="/resume/#tech-webgl" title="web API for GPU">
