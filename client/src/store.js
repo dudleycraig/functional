@@ -1039,6 +1039,35 @@ const useStore = create((set, get) => {
         to: '',
         clients: [
           {
+            name: 'Very Big Things',
+            link: 'https://verybigthings.com/',
+            description: 'Digital media company specialising in Clojure/Clojurescript.',
+            responsibilities: ['full-stack development of mobile application for coffee shop, blockchain toy store, and network security nodes risk representation.'],
+            technologies: {
+              frontend: ['reactnative', 'clojurescript', 'keechma.next', 'helix', 'tailwindcss', 'leaflet'],
+              backend: ['clojure', 'postgresql', 'postgis'],
+              applications: ['qgis'],
+            },
+            images: {
+              cover: {
+                lg: { status: 'no-image', src: 'images/portfolio/vbt/vbt.gif' },
+                sm: { status: 'no-image', src: 'images/portfolio/vbt/vbt.gif' },
+              },
+              xs: [{ status: 'no-image', src: 'images/portfolio/vbt/xs.vbt.png' }],
+              lg: [
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.odeko-1.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.odeko-2.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.odeko-3.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.cryptoys-1.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.cryptoys-2.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.cryptoys-3.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.rj-1.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.rj-2.png' },
+                { status: 'no-image', src: 'images/portfolio/vbt/lg.vbt.rj-3.png' },
+              ],
+            },
+          },
+          {
             name: 'Solenoid Engine',
             link: 'http://functional.org.za/engine/console',
             description: 'virtual representation of real-world metrics.',
@@ -1062,6 +1091,28 @@ const useStore = create((set, get) => {
                 { status: 'no-image', src: 'images/portfolio/personal/lg.engine-5.png' },
                 { status: 'no-image', src: 'images/portfolio/personal/lg.engine-6.png' },
                 { status: 'no-image', src: 'images/portfolio/personal/lg.engine-7.png' },
+              ],
+            },
+          },
+          {
+            name: 'OpsCore',
+            link: 'http://opscore.co.za',
+            description: 'Management of mining industry resources.',
+            responsibilities: ['frontend development of mobile application for mining industry resources.'],
+            technologies: {
+              frontend: ['reactnative', 'typescript', 'firebase', 'antd', 'webgl'],
+              applications: [],
+            },
+            images: {
+              cover: {
+                lg: { status: 'no-image', src: 'images/portfolio/opscore/opscore.gif' },
+                sm: { status: 'no-image', src: 'images/portfolio/opscore/opscore.gif' },
+              },
+              xs: [{ status: 'no-image', src: 'images/portfolio/opscore/xs.opscore.png' }],
+              lg: [
+                { status: 'no-image', src: 'images/portfolio/opscore/lg.opscore-1.png' },
+                { status: 'no-image', src: 'images/portfolio/opscore/lg.opscore-2.png' },
+                { status: 'no-image', src: 'images/portfolio/opscore/lg.opscore-3.png' },
               ],
             },
           },
