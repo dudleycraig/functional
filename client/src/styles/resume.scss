@@ -1,4 +1,7 @@
 section#resume {
+  display: flex;
+  flex-direction: column;
+
   @media only print {
     #identification {
       .gmt {
@@ -55,6 +58,7 @@ section#resume {
       line-height: 30px;
       padding-right: 12px;
     }
+
     #skills-body {
       width: 100%;
       height: 400px;
@@ -63,15 +67,28 @@ section#resume {
       border: 1px solid #000000;
       border-radius: 3px;
       background: #32383e;
+
       .skills-body-row {
         height: 30px;
         line-height: 30px;
         margin: 3px 0 3px 0;
+
         .skills-body-icon {
           svg {
             fill: #aaaaaa;
             polyline {
               fill: #aaaaaa;
+            }
+          }
+        }
+        @media only print {
+          .skills-body-icon {
+            svg {
+              color: #000000;
+              fill: #000000;
+              polyline {
+                fill: #222222;
+              }
             }
           }
         }
@@ -93,10 +110,34 @@ section#resume {
             margin: 0 auto;
           }
         }
+        @media only print {
+          .skills-body-current {
+          }
+        }
 
         .skills-body-proficiency {
           border: 1px solid #141619;
           border-radius: 3px;
+        }
+        @media only print {
+          .skills-body-proficiency {
+          }
+        }
+
+        .skills-body-experience {
+        }
+        @media only print {
+          .skills-body-experience {
+            .experience {
+              pre.years {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+      @media only print {
+        .skills-body-row {
         }
       }
 
@@ -109,6 +150,7 @@ section#resume {
         border-color: #ffffff;
         background: #ffffff;
       }
+
       .skills-body-row:hover .skills-body-icon > svg.tech-icon {
         fill: #ffffff;
         polyline {
@@ -116,41 +158,18 @@ section#resume {
         }
       }
     }
-  }
 
-  @media only print {
-    #skills {
-      #skills-header {
-      }
+    @media only print {
       #skills-body {
         background: none !important;
         height: auto !important;
-        overflow-y: unset !important;
-        .skills-body-row {
-          .skills-body-icon {
-            svg {
-              color: #000000;
-              fill: #000000;
-              polyline {
-                fill: #222222;
-              }
-            }
-          }
-          .skills-body-name {
-          }
-          .skills-body-experience {
-            .experience {
-              pre.years {
-                border: none;
-              }
-            }
-          }
-          .skills-body-current {
-          }
-          .skills-body-proficiency {
-          }
-        }
+        overflow-y: visible !important;
       }
+    }
+  }
+  @media only print {
+    #skills {
+      margin-top: 260px;
     }
   }
 }

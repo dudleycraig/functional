@@ -59,7 +59,11 @@ export default () => {
           </HeaderToggle>
           <Accordion.Collapse eventKey={`client-${clientIndex}`}>
             <Card.Body>
-              {client.images.cover.sm.src && <Image src={`${assets}/${client.images.cover.sm.src}`} className="d-none d-md-inline" style={{ width: '100%', height: 'auto' }} />}
+              <Image 
+                src={`${assets}/${client.images.cover.sm.src}`}
+                className="d-none d-md-inline" 
+                style={{width: '100%', height: 'auto'}}
+              />
               <i>responsibilities</i>.
               <ul className="mb-0">
                 {client.responsibilities.map((responsibility, index) => (

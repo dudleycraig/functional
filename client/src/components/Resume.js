@@ -49,7 +49,6 @@ export default () => {
           <Overview />
         </Col>
       </Row>
-      <br />
 
       <Row id="projects">
         <h3>Projects</h3>
@@ -57,7 +56,6 @@ export default () => {
           <Projects />
         </Col>
       </Row>
-      <br />
 
       <Row id="skills">
         <h3>Skills</h3>
@@ -100,9 +98,6 @@ export default () => {
           </div>
         </Col>
       </Row>
-      <br />
-      <br />
-      <br />
     </section>
   );
 };
