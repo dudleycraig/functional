@@ -3,6 +3,12 @@ section#resume {
   flex-direction: column;
 
   @media only print {
+    .print-button {
+      display: none;
+    }
+  }
+
+  @media only print {
     #identification {
       .gmt {
         display: none !important;

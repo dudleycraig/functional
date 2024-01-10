@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { Row, Col, Button } from 'react-bootstrap';
 import useStore from '../store';
 import Identification from './Identification';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import Overview from './Overview';
 import Projects from './Projects';
 import TechIcon from './TechIcon';
@@ -25,7 +27,19 @@ export default () => {
   const history = useHistory();
   return (
     <section id="resume" className="container flex-column">
-      <Row>
+      <Row className="print-button">
+        <Col className="col-12 text-left pl-4 mx-auto w-100">
+          <Button 
+            className="mr-1" 
+            variant="outline-light" 
+            style={{ minWidth: '90px' }} 
+            onClick={() => (window.print(), false)}>
+            <FontAwesomeIcon icon={faPrint} size="1x" /> Print
+          </Button>
+        </Col>
+      </Row>
+
+      <Row id="identification">
         <Col className="col-12 text-left pl-4 mx-auto w-100">
           <Identification />
         </Col>

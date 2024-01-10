@@ -49,19 +49,20 @@ export default () => {
         ROLE
       </dt>
       <dd className="text-left" style={{ float: 'left' }}>
-        freelance, full-stack
+        freelance, full-stack (services, web, android, iphone)
       </dd>
       <dt className="text-right pr-2" style={{ float: 'left', clear: 'left', width: '100px' }}>
         CORE TECH
       </dt>
       <dd className="text-left" style={{ float: 'left' }}>
         <TechLink name="clojure" />/<TechLink name="clojurescript" />
-        {', '}
+        {' \'('}
         <TechLink name="integrant" />
-        {', '}
-        <TechLink name="helix" />
-        {', '}
+        {' '}
+        <TechLink name="reagent" />
+        {' '}
         <TechLink name="tailwindcss" />
+        {')'}
       </dd>
     </dl>
   );
