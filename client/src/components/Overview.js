@@ -16,7 +16,7 @@ export default () => (
       {' full-stack.'}
     </p>
     <p>
-      {'Development leaning heavily into structured editing, utilizing Large Language Models, Test Driven Development, REPL Driven Development, and the data driven libraries associated thereof \'(integrant reitit devcards ...).'}
+      {'Development flow leaning heavily into AI (LLM\'s, Ollama.ai::mistral), structured editing, Test Driven Development, REPL Driven Development, and the data driven libraries associated thereof \'(integrant reitit devcards ...).'}
     </p>
     <p>
       {'Creativity leaning into applications rich in '}
