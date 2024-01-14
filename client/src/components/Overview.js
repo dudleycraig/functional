@@ -35,10 +35,11 @@ export default () => (
       <a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence" title="Generative artificial intelligence.">AI</a>
       {' (I am constantly evolving my own '}
       <a href="https://en.wikipedia.org/wiki/Large_language_model" title="Large Language Model, a deep learning algorithm that can perform a variety of natural language processing tasks.">LLM</a>
-      {' using '} 
-      <a href="/resume/#tech-pytorch" title="Tensor computation and deep neural networking.">PyTorch</a> 
-      {' via '}
-      <a href="https://github.com/clj-python/libpython-clj" title="Bridge between Clojure and Python">libpython-clj</a>
+      {' utilising '} 
+      ;; <a href="/resume/#tech-pytorch" title="Tensor computation and deep neural networking.">PyTorch</a> 
+      ;; {' via '}
+      ;; <a href="https://github.com/clj-python/libpython-clj" title="Bridge between Clojure and Python">libpython-clj</a>
+      <a href="http://resume/#tech-bosquet" title="LLMOps for Large Language Model-based applications.">Bosquet</a>
       {').'}
     </p>
     <p>

@@ -441,12 +441,12 @@ const useStore = create((set, get) => {
         proficiency: 6,
         current: true,
       },
-      pytorch: {
-        link: '#tech-pytorch',
-        text: 'PyTorch',
-        title: 'PyTorch',
+      bosquet: {
+        link: '#tech-bosquet',
+        text: 'Bosquet',
+        title: 'Bosquet',
         description: 'Tensor computation and deep neural networking.',
-        icon: 'faPython',
+        icon: 'Clojure',
         months: 3,
         proficiency: 1,
         current: true,
