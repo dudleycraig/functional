@@ -441,6 +441,16 @@ const useStore = create((set, get) => {
         proficiency: 6,
         current: true,
       },
+      pytorch: {
+        link: '#tech-pytorch',
+        text: 'PyTorch',
+        title: 'PyTorch',
+        description: 'Tensor computation and deep neural networking.',
+        icon: 'faPython',
+        months: 3,
+        proficiency: 1,
+        current: true,
+      },
       android: {
         link: '#tech-android',
         text: 'Android',

@@ -16,7 +16,30 @@ export default () => (
       {' full-stack.'}
     </p>
     <p>
-      {'Development flow leaning heavily into AI (LLM\'s, Ollama.ai::mistral), structured editing, Test Driven Development, REPL Driven Development, and the data driven libraries associated thereof \'(integrant reitit devcards ...).'}
+      {'Development flow leaning heavily into '}
+      <a href="https://clojure.org/guides/structural_editing" title="Manipulation of code tree forms.">structured editing</a>
+      {', '}
+      <a href="https://en.wikipedia.org/wiki/Test-driven_development" title="Software requirements being converted to test cases before software is fully developed.">Test Driven Development</a>
+      {', '}
+      <a href="https://practical.li/clojure/introduction/repl-workflow/" title="A set of tools and practices for programming that emphasize fast feedback (interactive development).">REPL Driven Development</a>
+      {', '}
+      {'the data driven libraries associated thereof '}
+      {'\'('}
+      <a href="/resume/#tech-integrant" title="Micro-framework for building applications with data-driven architecture.">Integrant</a>
+      {' '}
+      <a href="/resume/#tech-reitit" title="Data driven router.">Reitit</a>
+      {' '}
+      <a href="/resume/#tech-devcards" title="Interactively surface code that have a visual aspect into a browser interface.">Devcards</a>
+      {' ...), '}
+      {'and of course, '}
+      <a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence" title="Generative artificial intelligence.">AI</a>
+      {' (I am constantly evolving my own '}
+      <a href="https://en.wikipedia.org/wiki/Large_language_model" title="Large Language Model, a deep learning algorithm that can perform a variety of natural language processing tasks.">LLM</a>
+      {' using '} 
+      <a href="/resume/#tech-pytorch" title="Tensor computation and deep neural networking.">PyTorch</a> 
+      {' via '}
+      <a href="https://github.com/clj-python/libpython-clj" title="Bridge between Clojure and Python">libpython-clj</a>
+      {').'}
     </p>
     <p>
       {'Creativity leaning into applications rich in '}
